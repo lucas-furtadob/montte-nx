@@ -1,0 +1,54 @@
+---
+import { FeatureCarousel } from "@/components/feature-carousel";
+
+const features = [
+   {
+      id: "gratis-para-sempre",
+      title: "Grátis Para Sempre",
+      description:
+         "Todas as funcionalidades essenciais sem custo. Sem cartão de crédito, sem surpresas, sem pegadinhas. Use quanto tempo quiser.",
+      image: "https://placehold.co/725x478/151925/8b5cf6?text=Gratis+Forever",
+      width: "wide" as const,
+   },
+   {
+      id: "setup-rapido",
+      title: "Configuração em Minutos",
+      description:
+         "Cadastro rápido, importação de dados e pronto para usar. Sem consultorias caras, sem treinamentos intermináveis.",
+      image: "https://placehold.co/350x478/151925/8b5cf6?text=Setup+Rapido",
+      width: "narrow" as const,
+   },
+   {
+      id: "interface-moderna",
+      title: "Interface Moderna",
+      description:
+         "Design intuitivo e responsivo. Funciona em qualquer dispositivo, tão simples quanto os apps que você usa todo dia.",
+      image: "https://placehold.co/350x478/151925/8b5cf6?text=UI+Moderna",
+      width: "narrow" as const,
+   },
+   {
+      id: "colaboracao-ilimitada",
+      title: "Colaboração Ilimitada",
+      description:
+         "Adicione quantos usuários precisar, sem custo extra. Times inteiros trabalhando juntos, com controle de permissões granular.",
+      image: "https://placehold.co/725x478/151925/8b5cf6?text=Colaboracao",
+      width: "wide" as const,
+   },
+];
+---
+
+<section
+	id="problem-complex-erps"
+	class="py-16 md:py-24 overflow-hidden relative"
+>
+	<FeatureCarousel
+		items={features}
+		badge="Acessível e Simples"
+		title="Poder de ERP empresarial. Simplicidade de aplicativo moderno."
+		subtitle="Gestão completa sem mensalidades absurdas, implementações eternas ou interfaces confusas."
+		ctaText="Começar gratis"
+		ctaHref="/auth/sign-up"
+		benefitText="Economize milhares em licenças e treinamentos. Comece em minutos, não em meses."
+		client:load
+	/>
+</section>

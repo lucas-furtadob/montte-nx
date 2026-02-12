@@ -1,0 +1,62 @@
+---
+import { FeatureCarousel } from "@/components/feature-carousel";
+
+const features = [
+   {
+      id: "rastreamento-produtos",
+      title: "Rastreamento de Produtos",
+      description:
+         "Cada item com código único, localização e histórico completo. Saiba exatamente o que tem, onde está e quanto vale.",
+      image: "https://placehold.co/350x478/151925/f59e0b?text=Rastreamento",
+      width: "narrow" as const,
+   },
+   {
+      id: "movimentacoes-detalhadas",
+      title: "Movimentações Detalhadas",
+      description:
+         "Registro automático de entradas, saídas, transferências e ajustes. Auditoria completa de cada mudança no estoque.",
+      image: "https://placehold.co/725x478/151925/f59e0b?text=Movimentacoes",
+      width: "wide" as const,
+   },
+   {
+      id: "custeio-fifo-medio",
+      title: "Custeio FIFO e Médio",
+      description:
+         "Cálculo automático de custos por FIFO ou média ponderada. Margem de lucro precisa em cada venda.",
+      image: "https://placehold.co/350x478/151925/f59e0b?text=Custeio",
+      width: "narrow" as const,
+   },
+   {
+      id: "alertas-reposicao",
+      title: "Alertas de Reposição",
+      description:
+         "Notificações automáticas quando estoque atingir ponto de pedido. Nunca mais perca vendas por falta de produto.",
+      image: "https://placehold.co/725x478/151925/f59e0b?text=Alertas",
+      width: "wide" as const,
+   },
+   {
+      id: "integracao-fornecedores",
+      title: "Integração com Fornecedores",
+      description:
+         "Conecte com fornecedores para pedidos automáticos. Receba atualizações de preço e disponibilidade em tempo real.",
+      image: "https://placehold.co/350x478/151925/f59e0b?text=Fornecedores",
+      width: "narrow" as const,
+   },
+];
+---
+
+<section
+	id="problem-no-visibility"
+	class="py-16 md:py-24 overflow-hidden relative"
+>
+	<FeatureCarousel
+		items={features}
+		badge="Controle de Estoque"
+		title="Saiba exatamente o que você tem, onde está e quanto vale."
+		subtitle="Visibilidade completa do seu inventário com rastreamento em tempo real e alertas inteligentes."
+		ctaText="Ver estoque"
+		ctaHref="/features/inventory"
+		benefitText="Decisões inteligentes baseadas em dados reais, não em estimativas."
+		client:load
+	/>
+</section>

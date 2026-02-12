@@ -1,0 +1,102 @@
+---
+export const prerender = true;
+
+import CTA from "@/components/CTA.astro";
+import Footer from "@/components/Footer.astro";
+import FeatureDeepDive from "@/components/features/FeatureDeepDive.astro";
+import FeatureHero from "@/components/features/FeatureHero.astro";
+import StickyNavbar from "@/components/StickyNavbar.astro";
+import Layout from "@/layouts/Landing.astro";
+---
+
+<Layout>
+	<div class="flex flex-col bg-background">
+		<StickyNavbar />
+
+		<FeatureHero
+			eyebrow="Automação e Workflows"
+			title="Automação e Workflows Inteligentes"
+			description="Regras visuais, categorização automática, notificações e integrações. Elimine trabalho manual com automações que funcionam."
+			image="https://placehold.co/1200x700/151925/22c55e?text=Tela+de+Colaboracao"
+			imageAlt="Visao geral das configuracoes de colaboracao do Montte"
+		/>
+
+		<!-- Feature Deep Dives -->
+		<FeatureDeepDive
+			eyebrow="Automação"
+			title="Editor Visual de Regras"
+			description="Crie workflows arrastar-e-soltar sem código. Interface React Flow intuitiva para montar automações complexas sem precisar de desenvolvedores."
+			image="https://placehold.co/600x400/151925/22c55e?text=Editor+Visual"
+			imageAlt="Editor visual de regras de automação"
+			bullets={[
+				"Drag-and-drop visual para criar fluxos",
+				"Lógica AND/OR para condições complexas",
+				"Preview em tempo real das regras",
+				"Biblioteca de templates prontos",
+			]}
+		/>
+
+		<FeatureDeepDive
+			eyebrow="Inteligência"
+			title="Categorização Automática"
+			description="Regras aprendem e categorizam transações automaticamente. Configure uma vez, economize horas toda semana com sugestões inteligentes baseadas no seu histórico."
+			image="https://placehold.co/600x400/151925/22c55e?text=Auto+Categoria"
+			imageAlt="Categorização automática de transações"
+			bullets={[
+				"Aprende com seus padrões de categorização",
+				"Sugestões baseadas em descrição e valor",
+				"Aplicação retroativa em histórico",
+				"Confiança aumenta com uso",
+			]}
+			reverse={true}
+		/>
+
+		<FeatureDeepDive
+			eyebrow="Importação"
+			title="Importação CSV/OFX"
+			description="Importe extratos bancários com detecção de duplicatas. Compatível com todos os bancos brasileiros via arquivos CSV ou OFX."
+			image="https://placehold.co/600x400/151925/22c55e?text=Importar"
+			imageAlt="Wizard de importação de extratos"
+			bullets={[
+				"Suporte a CSV e OFX",
+				"Detecção automática de duplicatas",
+				"Mapeamento inteligente de colunas",
+				"Importação em lote de meses",
+			]}
+		/>
+
+		<FeatureDeepDive
+			eyebrow="Notificações"
+			title="Notificações Inteligentes"
+			description="Alertas automáticos de vencimentos e metas. Push notifications e email configuráveis por regra para nunca perder prazos importantes."
+			image="https://placehold.co/600x400/151925/22c55e?text=Notificacoes"
+			imageAlt="Central de notificações e alertas"
+			bullets={[
+				"Alertas de vencimento de contas",
+				"Notificações de metas atingidas",
+				"Push notifications no navegador",
+				"Email digest diário ou semanal",
+			]}
+			reverse={true}
+		/>
+
+		<FeatureDeepDive
+			eyebrow="Produtividade"
+			title="Templates Reutilizáveis"
+			description="Crie modelos para transações e contas recorrentes. Um clique para lançar despesas fixas mensais sem redigitar informações."
+			image="https://placehold.co/600x400/151925/22c55e?text=Templates"
+			imageAlt="Biblioteca de templates de transações"
+			bullets={[
+				"Salve transações como templates",
+				"Preencha formulários com um clique",
+				"Templates para contas recorrentes",
+				"Compartilhe templates com o time",
+			]}
+		/>
+
+		<!-- Final CTA -->
+		<CTA />
+
+		<Footer />
+	</div>
+</Layout>

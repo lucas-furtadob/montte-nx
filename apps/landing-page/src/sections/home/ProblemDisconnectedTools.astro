@@ -1,0 +1,62 @@
+---
+import { FeatureCarousel } from "@/components/feature-carousel";
+
+const features = [
+   {
+      id: "gestao-financeira-completa",
+      title: "Gestão Financeira Completa",
+      description:
+         "Transações, contas a pagar/receber, conciliação bancária e fluxo de caixa em um só lugar. Tudo conectado e sincronizado.",
+      image: "https://placehold.co/725x478/151925/3b82f6?text=Gestao+Financeira",
+      width: "wide" as const,
+   },
+   {
+      id: "estoque-integrado",
+      title: "Estoque Integrado",
+      description:
+         "Controle de produtos, movimentações e custos integrado às finanças. Saldo em tempo real sem retrabalho.",
+      image: "https://placehold.co/350x478/151925/3b82f6?text=Estoque",
+      width: "narrow" as const,
+   },
+   {
+      id: "multi-organizacao",
+      title: "Multi-Organização",
+      description:
+         "Gerencie múltiplas empresas em uma conta. Troque de contexto com um clique, relatórios consolidados quando precisar.",
+      image: "https://placehold.co/350x478/151925/3b82f6?text=Multi-Org",
+      width: "narrow" as const,
+   },
+   {
+      id: "centros-custo",
+      title: "Centros de Custo",
+      description:
+         "Organize despesas por departamento, projeto ou filial. Visão clara de onde o dinheiro está sendo usado.",
+      image: "https://placehold.co/725x478/151925/3b82f6?text=Centros+Custo",
+      width: "wide" as const,
+   },
+   {
+      id: "dashboards-unificados",
+      title: "Dashboards Unificados",
+      description:
+         "Todos os indicadores em painéis customizáveis. Finanças, estoque e operações em visualizações intuitivas.",
+      image: "https://placehold.co/350x478/151925/3b82f6?text=Dashboards",
+      width: "narrow" as const,
+   },
+];
+---
+
+<section
+	id="problem-disconnected-tools"
+	class="py-16 md:py-24 overflow-hidden relative"
+>
+	<FeatureCarousel
+		items={features}
+		badge="Plataforma Unificada"
+		title="Tudo conectado. Dados sempre atualizados."
+		subtitle="Elimine silos de informação e tenha visão completa do seu negócio em tempo real."
+		ctaText="Ver integrações"
+		ctaHref="/features/financial-management"
+		benefitText="Decisões baseadas em dados reais, não em planilhas desatualizadas."
+		client:load
+	/>
+</section>
