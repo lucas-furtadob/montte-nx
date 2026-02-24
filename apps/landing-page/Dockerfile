@@ -10,13 +10,44 @@ WORKDIR /app
 # This takes advantage of Docker's layer caching, speeding up subsequent builds.
 COPY bun.lock ./
 COPY package.json ./
+# apps
+COPY apps/dashboard/package.json ./apps/dashboard/
 COPY apps/landing-page/package.json ./apps/landing-page/
-COPY packages/ui/package.json ./packages/ui/
-COPY packages/posthog/package.json ./packages/posthog/
-COPY packages/utils/package.json ./packages/utils/
-COPY packages/environment/package.json ./packages/environment/
-COPY packages/money/package.json ./packages/money/
+COPY apps/server/package.json ./apps/server/
+COPY apps/web/package.json ./apps/web/
+COPY apps/worker/package.json ./apps/worker/
+# libraries
+COPY libraries/condition-evaluator/package.json ./libraries/condition-evaluator/
+COPY libraries/csv/package.json ./libraries/csv/
 COPY libraries/money/package.json ./libraries/money/
+COPY libraries/ofx/package.json ./libraries/ofx/
+COPY libraries/rules-engine/package.json ./libraries/rules-engine/
+# packages
+COPY packages/analytics/package.json ./packages/analytics/
+COPY packages/api/package.json ./packages/api/
+COPY packages/arcjet/package.json ./packages/arcjet/
+COPY packages/authentication/package.json ./packages/authentication/
+COPY packages/brasil-api/package.json ./packages/brasil-api/
+COPY packages/cache/package.json ./packages/cache/
+COPY packages/csv/package.json ./packages/csv/
+COPY packages/database/package.json ./packages/database/
+COPY packages/encryption/package.json ./packages/encryption/
+COPY packages/environment/package.json ./packages/environment/
+COPY packages/files/package.json ./packages/files/
+COPY packages/logging/package.json ./packages/logging/
+COPY packages/money/package.json ./packages/money/
+COPY packages/notifications/package.json ./packages/notifications/
+COPY packages/ofx/package.json ./packages/ofx/
+COPY packages/pdf/package.json ./packages/pdf/
+COPY packages/posthog/package.json ./packages/posthog/
+COPY packages/queue/package.json ./packages/queue/
+COPY packages/reconciliation/package.json ./packages/reconciliation/
+COPY packages/stripe/package.json ./packages/stripe/
+COPY packages/transactional/package.json ./packages/transactional/
+COPY packages/ui/package.json ./packages/ui/
+COPY packages/utils/package.json ./packages/utils/
+COPY packages/workflows/package.json ./packages/workflows/
+# tooling
 COPY tooling/typescript/package.json ./tooling/typescript/
 
 # Install all dependencies (including devDependencies needed for the build step)
