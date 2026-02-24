@@ -14,7 +14,6 @@ COPY package.json ./
 COPY apps/dashboard/package.json ./apps/dashboard/
 COPY apps/landing-page/package.json ./apps/landing-page/
 COPY apps/server/package.json ./apps/server/
-COPY apps/web/package.json ./apps/web/
 COPY apps/worker/package.json ./apps/worker/
 # libraries
 COPY libraries/condition-evaluator/package.json ./libraries/condition-evaluator/
