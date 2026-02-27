@@ -62,7 +62,6 @@ const posthogEnv = {
          property="og:description"
          content={brandDescription}
       >
-      <meta property="og:image" content="/og-image.webp">
       <meta property="og:url" content="https://montte.co">
       <meta property="og:type" content="website">
       {import.meta.env.PROD && <script set:html={getAstroPosthogConfig(
